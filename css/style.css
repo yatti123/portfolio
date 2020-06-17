@@ -255,6 +255,11 @@ nav {
     border-radius: 1em;
 }
 
+@media screen and (min-width: 600px) {
+    .nav__list .download-resume {
+        display: none;
+    }
+}
 /* Header End*/
 
 /* Intro Section */
