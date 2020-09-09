@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Postmaster</title>
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+  <!-- Font Awsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" 
+  integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet"> 
+
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/postman.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Nvaigation Bar -->
+  <header class="header">
+    <div class="logo">
+        <!-- <img src="img/devjane.png" alt="yattii's pic"> -->
+        {PostMaster}
+    </div>
+    <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+    </button>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav_link">Home</a></li>
+            <li class="nav__item download-resume"><a href="https://drive.google.com/file/d/1RA7iOMGPbjzSARQydZU63QfW0wy5eeFs/view?usp=sharing" 
+                class="nav_link">Download</a></li>
+            <li class="nav__item"><a href="index.html#services" class="nav_link">My Services</a></li>
+            <li class="nav__item"><a href="index.html#about" class="nav_link">About Me</a></li>
+            <li class="nav__item"><a href="index.html#work" class="nav_link">My Work</a></li>
+            <li class="nav__item"><a href="academic.html" class="nav_link">Academic Details</a></li>
+            <li class="nav__item"><a href="contact.html" class="nav_link">Contact Me</a></li>
+        </ul>
+    </nav>
+</header>
+
+        <!-- Introduction -->
+        <section class="intro">
+          <h1 class="section__title section__title--intro">
+              <strong>Welcome to Postmaster </strong>
+          </h1>
+
+          <!-- animation start -->
+          <div class="box">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+          </div>
+          <!-- animation end -->
+
+          <p class="section__subtitle section__subtitle--intro"><i class="fas fa-tasks"></i> Postmaster Api Clone</p>
+          <img src="img/portfolio-01.jpg" alt="" class="intro__img">
+      </section>
+
+  <!-- container -->
+  <div class="container">
+    <form action="" id="subForm" onsubmit="requestContent(event);">
+      <div class="url">
+        <label for="url">URL</label>
+        <input type="text" id="url" name="givenUrl" placeholder="Enter your url" />
+      </div>
+      <div class="req_type">
+        <label for="get">Request Type</label>
+        <div class="radio">
+          <div class="radio-btn">
+            <input type="radio" id="get" name="re_type" value="GET" />
+            <label for="get">GET</label>
+          </div>
+          <div class="radio-btn">
+            <input type="radio" id="post" name="re_type" value="POST" />
+            <label for="post">POST</label>
+          </div>
+        </div>
+      </div>
+      <div class="con_type">
+        <label for="jsonradio">Content Type</label>
+        <div class="radio">
+          <div class="radio-btn">
+            <input type="radio" id="jsonradio" name="con_type" value="JSON" />
+            <label for="jsonradio">JSON</label>
+          </div>
+          <div class="radio-btn">
+            <input type="radio" id="paramsradio" name="con_type" value="Custom Parameters" />
+            <label for="paramsradio">Custom Parameters</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parameter box, This will hide on clicking json option in Content Type -->
+      <div id="parameters">
+        <div class="custom_params" id="param1">
+          <label for="custParams1">Parameter 1</label>
+          <div class="paramContainer">
+            <input type="text" class="custParams" name="" placeholder="Enter Parameter 1 key" />
+            <input type="text" class="custParamVal" name="" placeholder="Enter Parameter 1 value" />
+            <i class="fas fa-plus-circle" id="addBtn"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Request Json, This will hide on clicking Custome parameter option in Content Type -->
+      <div class="req_json">
+        <label for="reqJson">Enter Request json</label>
+        <textarea id="reqJson" rows="5" name="re_Json"></textarea>
+      </div>
+
+      <input type="submit" class="btn" value="Submit" />
+    </form>
+
+    <!-- Response -->
+    <div class="response">
+      <label for="resp">Response</label>
+      <textarea id="resp" rows="5"></textarea>
+    </div>
+  </div>
+        <!-- Footer -->
+        <footer class="footer">
+          <a href="mailto:yatender.83@gmail.com" class="footer__link">© Copyright 2020</a>
+          <ul class="social-list">
+              <li class="social-list__item"><a href="https://www.linkedin.com/in/yatender-prajapati-77aa6b24/" class="social-list__link">
+                  <i class="fab fa-linkedin-in"></i></a></li>
+              <li class="social-list__item"><a href="https://www.facebook.com/23.yatender/" class="social-list__link">
+                  <i class="fab fa-facebook-f"></i></a></li>
+              <li class="social-list__item"><a href="https://twitter.com/rockingyatender" class="social-list__link">
+                  <i class="fab fa-twitter"></i></a></li>
+              <li class="social-list__item"><a href="https://github.com" class="social-list__link"><i class="fab fa-github"></i></a></li>
+          </ul>
+      </footer>
+  <script src="js/index.js"></script>
+  <script src="js/postman.js" defer></script>
+</body>
+
+</html>
