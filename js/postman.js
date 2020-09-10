@@ -109,7 +109,6 @@ function requestContent(event){
         }
         let allParams = document.getElementsByClassName('custom_params');
         for(Param of allParams){
-            console.log(Param.children[1].firstElementChild);
             let key = Param.children[1].children[0].value;
             let value = Param.children[1].children[1].value;
             data[key]=value;
