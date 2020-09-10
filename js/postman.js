@@ -64,6 +64,45 @@ function requestContent(event){
     let request_type = event.target.re_type.value;
     let content_type = event.target.con_type.value;
 
+    // Validate all fields
+    if(url == ''){
+        document.getElementById('warning').style.display = 'block';
+        document.getElementById('warning').innerHTML = '<small>Please enter URL</small>';
+        setTimeout(()=>{
+            document.getElementById('warning').style.display = 'none';
+        },3000);
+        return;
+    }
+    else if(!document.getElementById('get').checked && !document.getElementById('post').checked) {
+        document.getElementById('warning').style.display = 'block';
+        document.getElementById('warning').innerHTML = '<small>Please Select Request Type</small>';
+        setTimeout(()=>{
+            document.getElementById('warning').style.display = 'none';
+        },3000);
+        return;
+    }
+    else if(request_type == 'POST'){
+        if (!document.getElementById('jsonradio').checked && !document.getElementById('paramsradio').checked){
+            document.getElementById('warning').style.display = 'block';
+            document.getElementById('warning').innerHTML = '<small>Please Select Content Type</small>';
+            setTimeout(()=>{
+                document.getElementById('warning').style.display = 'none';
+            },3000);
+            return;
+        }
+        else if(content_type == 'JSON'){
+            if (event.target.re_Json.value == ''){
+                document.getElementById('warning').innerHTML = '<small>Please Enter request Json</small>';
+                document.getElementById('warning').style.display = 'block';
+                setTimeout(()=>{
+                    document.getElementById('warning').style.display = 'none';
+                },3000);
+                return;
+            }
+        }
+    }
+
+
     //If user has used params option instead of json, collect all the parameters in an object
     if(content_type == 'Custom Parameters'){
         data = {
@@ -79,8 +118,7 @@ function requestContent(event){
     }
     else {
         data = event.target.re_Json.value;
-        console.log(data);
-    }
+    };
 
     // Log all the values in the console for debugging
     console.log('url is ',url);

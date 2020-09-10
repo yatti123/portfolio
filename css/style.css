@@ -84,6 +84,18 @@ strong {
     transform: scale(1.5);
 }
 
+.btnpost {
+    display: inline-block;
+    color: var(--clr-dark);
+    text-decoration: none;
+    background: var(--clr-accent);
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    padding: .5em 2.5em;
+}
+
 /* Typography */
 h1,
 h2,
@@ -749,3 +761,105 @@ tbody tr:nth-child(odd) {
     background-color: #dddddd;
 }
 /* Academic Details End*/
+
+
+
+
+/* Postman clone*/
+.container {
+    margin: auto;
+    width: 50%;
+    /* text-align : center; */
+}
+
+#url {
+    width: 70%;
+}
+
+#urlval{
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .radio {
+        display: flex;
+    }
+
+    .radio-btn {
+        width: 100%;
+    }
+
+    .req_type,.con_type{
+        margin: 1rem 0;
+    }
+
+    .paramsradioval{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .req_type {
+        display : flex;
+        justify-content: space-between;
+        margin : 0.5rem 0;
+    }
+    
+    .con_type {
+        display : flex;
+        justify-content: space-between;
+        margin : 0.5rem 0;
+    }
+
+    .url {
+        display : flex;
+        justify-content: space-between;
+        margin : 0.5rem 0;
+    }
+}
+
+
+.radio {
+    width: 71%;
+    text-align: left;
+}
+
+#reqJson{
+    width: 100%;
+}
+
+.req_json {
+    margin: 1rem 0 0;
+}
+
+.custom_params {
+    display : flex;
+    justify-content: space-between;
+    margin : 0.5rem 0;
+}
+
+.paramContainer {
+    width: 70%;
+}
+
+.custParams,.custParamVal {
+    width: 46%;
+}
+
+
+.response {
+    margin: 2rem 0;
+}
+
+#resp {
+    width: 100%;
+    background-color : var(--clr-dark);
+    color : var(--clr-light);
+}
+
+#warning {
+    display : none;
+    background-color: #d9adad;
+    border-radius : 10px;
+    margin: 0 0 1rem ;
+}
